@@ -2,7 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import NavbarTop from "./components/NavbarTop";
-
+import Image from "next/image";
+import BackButton from "./components/BackButton";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,6 +27,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavbarTop/>
+       
+        <Image src="/logo.png" width={300} height={200} alt="madkammeret logo" aria-label="Logo Madkammeret"/>
+        <BackButton/>
         <Navbar/>
         {children}
       </body>
