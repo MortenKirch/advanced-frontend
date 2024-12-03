@@ -1,24 +1,27 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faHandshake, faBottleWater, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { FaHome, FaUtensils, FaHandshake, FaGlassWhiskey } from 'react-icons/fa'; // Import equivalent icons
 
 export default function Navbar() {
     return (
         <header>
             <nav className="fixed bottom-0 w-full h-16 flex items-center justify-around bg-creme text-f-green">
                 <div className="flex flex-col h-14">
-                    <FontAwesomeIcon icon={faHouse} title="Home" aria-label="Home" className="mt-1" />
-                    <p className="text-xs mt-2">Home</p>
+                    {/* Replace FontAwesomeIcon with FaHome */}
+                    <FaHome size={30}title="Home" aria-label="Home" />
+                    <p className="text-xs mt-1">Home</p>
                 </div>
-                <div className="flex flex-col items-center h-14 ">
-                    <FontAwesomeIcon icon={faUtensils} title="Ugens menu" aria-label="Ugens menu"  />
+                <div className="flex flex-col items-center h-14">
+                    {/* Replace FontAwesomeIcon with FaUtensils */}
+                    <FaUtensils size={30} title="Ugens menu" aria-label="Ugens menu" />
                     <p className="text-xs mt-1">Ugens menu</p>
                 </div>
                 <div className="flex flex-col items-center h-14">
-                    <FontAwesomeIcon icon={faBottleWater} title="Drikkevarer" aria-label="Drikkevarer"  />
+                    {/* Replace FontAwesomeIcon with FaGlassWhiskey */}
+                    <FaGlassWhiskey size={30} title="Drikkevarer" aria-label="Drikkevarer" />
                     <p className="text-xs mt-1">Drikkevarer</p>
                 </div>
                 <div className="flex flex-col items-center h-14">
-                    <FontAwesomeIcon icon={faHandshake} title="Mødeforplejning" aria-label="Mødeforplejning"/>
+                    {/* Replace FontAwesomeIcon with FaHandshake */}
+                    <FaHandshake size={30} title="Mødeforplejning" aria-label="Mødeforplejning" />
                     <p className="text-xs mt-1">Mødeforplejning</p>
                 </div>
             </nav>
