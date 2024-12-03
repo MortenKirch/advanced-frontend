@@ -30,22 +30,31 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
+
             - name: Set up Node
               uses: actions/setup-node@v3
               with:
                   node-version: 18
                   cache: "npm"
+
             - name: Install dependencies
               run: npm install
-            - name: Build
-              run: npm run build && cp ./dist/index.html ./dist/404.html
+
+            - name: Build and Export
+              run: npm run build && npm run export
+
+            - name: Copy index.html to 404.html
+              run: cp ./out/index.html ./out/404.html
+
             - name: Setup Pages
               uses: actions/configure-pages@v3
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:
-                  # Upload dist repository
-                  path: "./dist"
+                  # Upload the 'out' directory
+                  path: "./out"
+
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v1
