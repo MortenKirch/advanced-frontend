@@ -10,10 +10,10 @@ export default function NavbarTop() {
                 <Image src="/gulerod.png" alt="Logo" width={100} height={30} />
                 </Link>
                 <div className="flex flex-row w-30">
-                    <Link href="/notification">
+                    <Link href="/pages/notification">
                     <FaBell title="Notifications" aria-label="Notifications"  size={25}/>
                     </Link>
-                    <Link href="/login">
+                    <Link href="/pages/login">
                     <FaSignInAlt title="Login" aria-label="Login" className="ml-6" size={25}/>
                     </Link>
                 </div>

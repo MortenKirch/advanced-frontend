@@ -9,17 +9,17 @@ export default function Navbar() {
                     <FaHome size={30}title="Home" aria-label="Home" />
                     <p className="text-xs mt-1">Home</p>
                 </Link>
-                <Link href="ugensMenu"className="flex flex-col items-center h-14">
+                <Link href="/pages/ugensMenu"className="flex flex-col items-center h-14">
                     {/* Replace FontAwesomeIcon with FaUtensils */}
                     <FaUtensils size={30} title="Ugens menu" aria-label="Ugens menu" />
                     <p className="text-xs mt-1">Ugens menu</p>
                 </Link>
-                <Link href="/drikkevare"className="flex flex-col items-center h-14">
+                <Link href="/pages/drikkevare"className="flex flex-col items-center h-14">
                     {/* Replace FontAwesomeIcon with FaGlassWhiskey */}
                     <FaGlassWhiskey size={30} title="Drikkevarer" aria-label="Drikkevarer" />
                     <p className="text-xs mt-1">Drikkevarer</p>
                 </Link>
-                <Link href="/modeforplejning"className="flex flex-col items-center h-14">
+                <Link href="/pages/modeforplejning"className="flex flex-col items-center h-14">
                     {/* Replace FontAwesomeIcon with FaHandshake */}
                     <FaHandshake size={30} title="Mødeforplejning" aria-label="Mødeforplejning" />
                     <p className="text-xs mt-1">Mødeforplejning</p>
