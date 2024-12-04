@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function Page() {
   return (
     <>
-    <h1 className="text-center">Velkommen til Madkammeret</h1>
+    <h1 className="text-center font-morningbrew">Velkommen til Madkammeret</h1>
 
     <section className="grid grid-row-4 grid-cols-2 gap-2 m-2">
 

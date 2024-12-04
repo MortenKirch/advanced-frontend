@@ -17,8 +17,11 @@ module.exports = {
         butter: '#F0E0AE',
         blush: '#F1CDCC',
         white: "#FBF9F5",
-        cream: '#FFEEE2', // New soft cream color
-        forest: '#39412E', // New dark green/forest color
+        cream: '#FFEEE2', 
+        forest: '#39412E', 
+      },
+      fontFamily: {
+        morningbrew: ['morningbrew', 'sans-serif'], 
       },
       borderRadius: {
 
