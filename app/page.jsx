@@ -8,13 +8,13 @@ export default function Page() {
 
     <section className="grid grid-row-4 grid-cols-2 gap-2 m-2">
 
-    <div className="bg-white row-span-1 col-span-2 w-full h-full rounded-large drop-shadow-xl">
+    <div className="bg-white row-span-1 col-span-2 w-full h-full rounded-large drop-shadow-xl ">
      
      <h2 className="bg-rose p-2 rounded-t-large ">Morgenmad</h2>
-     <p>Kom ned i kanitnen og få din morgenmad eller se bagerens friskbagte brød</p>
+     <p className="p-2">Kom ned i kanitnen og få din morgenmad eller se bagerens friskbagte brød</p>
       <div className="flex rounded-b-large h-44 " >
 
-        <ul >
+        <ul  className="p-2 flex flex-col justify-end">
         <li>
         Kaffe: 12kr
         </li>
@@ -42,7 +42,7 @@ export default function Page() {
         <h2 className="bg-butter p-2 rounded-t-large ">Tilbud</h2>
       <div className="flex rounded-b-large" >
         <p className="p-2">se hvad vi har på tilbud idag</p>
-        <a className=" block w-10 border-butter border-4 rounded-full h-10 self-end"> <FaArrowRight size={30}/></a>
+        <a className=" block w-10 border-butter border-4 rounded-full h-10 self-end  m-2 mr-2 "> <FaArrowRight size={30}/></a>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function Page() {
      
         <h2 className="p-2 rounded-t-large ">Klippekort</h2>
       <div className="flex rounded-b-large" >
-        <p>se hvad vi har på tilbud idag</p>
+        <p>Spar penge med vores nye kippekort</p>
         <a className=" block w-10 border-white border-4 rounded-full h-10 self-end"> <FaArrowRight size={30}/></a>
         </div>
       </div>
