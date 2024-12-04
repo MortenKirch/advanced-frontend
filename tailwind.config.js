@@ -16,7 +16,9 @@ module.exports = {
         gold: '#E6C680',
         butter: '#F0E0AE',
         blush: '#F1CDCC',
-        white: "#FBF9F5"
+        white: "#FBF9F5",
+        cream: '#FFEEE2', // New soft cream color
+        forest: '#39412E', // New dark green/forest color
       },
       borderRadius: {
 

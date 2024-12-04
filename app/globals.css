@@ -21,9 +21,16 @@ body {
 }
 h1{
   font-size: 2.5rem;
-
+text-align: center;
 }
 h2{
   font-family: "morning-brew", "Roboto",sans-serif;
   font-size: 1.6rem;
+  text-align: center;
+}
+p{
+  font-size: 14px;
+}
+li{
+  font-size: 14px;
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Navbar() {
     return (
         <header>
-            <nav className="fixed bottom-0 w-full h-16 flex items-center justify-around bg-creme text-f-green z-10">
+            <nav className="fixed bottom-0 w-full h-16 flex items-center justify-around bg-cream text-forest z-10">
                 <Link href="/"className="flex flex-col h-14">
                     {/* Replace FontAwesomeIcon with FaHome */}
                     <FaHome size={30}title="Home" aria-label="Home" />
