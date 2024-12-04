@@ -11,6 +11,10 @@ module.exports = {
         "creme":"#FFEEE2",
         "f-green":"#39412E",
       },
+      borderRadius: {
+
+        'large': '20px',
+      }
     },
   },
   plugins: [],
