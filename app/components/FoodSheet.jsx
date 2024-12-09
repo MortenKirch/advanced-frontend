@@ -3,7 +3,7 @@ export default function FoodSheet(){
     return(
 
             <>
-            <h3>Heading</h3>
+            <h3 className="font-bold">Heading</h3>
             <Food></Food>
 
             </>
