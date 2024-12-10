@@ -23,6 +23,7 @@ export default async function Drikkevarer(){
                     </>
            )
        })}
+       <p className="text-xs col-span-2 text-center">vi gør opmærksomme om at alle flasker har en pant på min 1 kr.</p>
        </section>
    )
   }             

@@ -23,25 +23,25 @@ export default function Mødeforplejning() {
     </form>
     <FoodSheet></FoodSheet>
 
-    <div class="">
-      <h3 class="text-lg font-bold">Bestilling</h3>
-      <div class="bg-gray-200 p-4 h-24 m-2 rounded-lg">
-      <div class="flex justify-between items-center mt-2">
-      <span class="">ting i kurven: x antal</span>
+    <div className="">
+      <h3 className="text-lg font-bold">Bestilling</h3>
+      <div className="bg-gray-200 p-4 h-24 m-2 rounded-lg">
+      <div className="flex justify-between items-center mt-2">
+      <span className="">ting i kurven: x antal</span>
      
-      <span class="text-lg font-semibold">0 kr</span>
+      <span className="text-lg font-semibold">0 kr</span>
       </div>
 
-      <div class="flex justify-between items-center mt-2">
-        <span class="font-bold">Pris ialt:</span>
-        <span class="text-lg font-semibold">0 kr</span>
+      <div className="flex justify-between items-center mt-2">
+        <span className="font-bold">Pris ialt:</span>
+        <span className="text-lg font-semibold">0 kr</span>
       </div>
       </div>
-      <p class="text-sm text-gray-500 mt-2 text-center">Obs: Kokketimer = 325 kr, bio kopper 3 kr</p>
+      <p className="text-sm text-gray-500 mt-2 text-center">Obs: Kokketimer = 325 kr, bio kopper 3 kr</p>
     </div>
 
   
-    <button class="w-52 mt-6 bg-forest text-white py-2 rounded-large font-bold m-auto flex self-center justify-center">
+    <button className="w-52 mt-6 bg-forest text-white py-2 rounded-large font-bold m-auto flex self-center justify-center">
       Send til godkendelse
     </button>
   
