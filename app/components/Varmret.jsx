@@ -12,7 +12,7 @@ export default function Dip(){
 <button className="underline text-xs self-end mr-2">se vegetar muligheder her</button>
 </div>
   <div className="flex bg-butter overflow-hidden rounded-large">
-    <Image src="/placeholder-image.png" width={200} height={200}></Image>
+    <Image src="/placeholder-image.png" width={200} height={200} alt="varmret"></Image>
     <div>
     <h3 className="p-2 font-bold">overskrift</h3>
     <p className="pl-2">undertekst omkring den ret som skal være her</p>
