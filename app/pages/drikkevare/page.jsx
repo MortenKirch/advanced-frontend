@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Drink from "@/app/components/Drink";
 
 export default async function Drikkevarer(){
@@ -15,7 +15,7 @@ export default async function Drikkevarer(){
   
    return(
     <section className="grid grid-cols-2 gap-2 m-2 ">
-      
+
        {drinks.map(drink =>{
            return(
                   <>
