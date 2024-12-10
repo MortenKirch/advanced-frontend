@@ -7,7 +7,7 @@ export default function NavbarTop() {
         <header className="fixed top-0 w-full bg-cream text-f-green z-10">
             <nav className="container mx-auto px-4 py-2 flex justify-between items-center align-center h-16">
             <Link href="/">
-                <Image src="/gulerod.png" alt="Logo" width={100} height={30} />
+                <Image src="/gulerod.png" alt="Logo" width={200} height={50} className='h-8 w-auto' />
                 </Link>
                 <div className="flex flex-row w-30 text-forest" >
                     <Link href="/pages/notification">

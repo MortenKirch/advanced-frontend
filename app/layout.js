@@ -22,13 +22,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mt-16 mb-20`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <section className="mt-16 mb-20"> 
+
+       
         <NavbarTop/>
        
 
         <Navbar/>
         {children}
+        </section>
       </body>
     </html>
   );

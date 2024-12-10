@@ -27,12 +27,12 @@ export default function Page() {
      </div>
    </div>
    
-
+{}
       <div className="bg-teal row-span-2 col-span-1 w-full h-full rounded-large drop-shadow-xl overflow-hidden">
       <h2>Om os</h2>
       <p className="p-2">Vil du hører mere om os her i Madkammeret så gå et smudt ind på vores hjemmeside, hvor der står meget mere.</p>
       <div className="flex flex-row justify-between">
-      <Image src="/jacob.png" width={100} height={100} alt="billede af Jacob, Ejer af madkammeret" /> 
+      <Image src="/jacob.png" width={100} height={100} alt="billede af Jacob, Ejer af madkammeret"  className="h-auto w-auto"/> 
       <a href="https://www.madkammer.dk/om-os/" target="_blank"className=" block w-10 h-10 border-white border-4 rounded-full self-end m-2 mr-4 "> <FaArrowRight size={30} className="text-white"/></a>
       </div>
       </div>

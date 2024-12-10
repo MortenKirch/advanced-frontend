@@ -1,6 +1,26 @@
+"use client";
 import FoodSheet from "@/app/components/FoodSheet";
+import { useEffect, useState } from "react";
+
+const DateInput = () => {
+  const [currentDate, setCurrentDate] = useState("");
+
+  useEffect(() => {
+    const today = new Date().toISOString().split("T")[0];
+    setCurrentDate(today); 
+  }, []);
+
+  return ( <input type="Date" defaultValue={currentDate} min="2024-01-01" max="2099-12-31" className="w-1/2 border-black rounded-large border h-12 px-4 m-1" placeholder="Dato"/>
+  );
+};
+
+
+
 
 export default function Mødeforplejning() {
+
+
+
   return (
     <section className="ml-2 mr-2">
       <h1>mødeforplejning</h1>
@@ -8,7 +28,7 @@ export default function Mødeforplejning() {
     <input type="text" className="w-full border-black rounded-large border h-12 px-4 m-1" placeholder="Navn på arrengement"/>
     <input type="text" className="w-full border-black rounded-large border h-12 px-4 m-1" placeholder="Serveringsted"/>
     <div className="flex ">
-    <input type="Date" min="2024-01-01" max="2099-12-31" className="w-1/2 border-black rounded-large border h-12 px-4 m-1" placeholder="Dato"/>
+      <DateInput/>
     <input type="Number"  className="w-1/2 border-black rounded-large border h-12 px-4 m-1" placeholder="Antal ialt"/>
     </div>
 

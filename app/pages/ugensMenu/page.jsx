@@ -5,7 +5,9 @@ import Dressing from "@/app/components/Dressing";
 import Dip from "@/app/components/Dip";
 import Salat from "@/app/components/Salat";
 import Varmret from "@/app/components/Varmret";
+
 export default function UgensMenu() {
+  
   return (
     <section className="m-4 ">
 <h1>uge current week</h1>
@@ -53,7 +55,7 @@ export default function UgensMenu() {
 
 </section>
 
-
+<script src="/codetest.js"></script>
 
 </section>
 
