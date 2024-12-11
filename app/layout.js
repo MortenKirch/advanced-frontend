@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import NavbarTop from "./components/NavbarTop";
@@ -11,10 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        
-      >
-        <section className="mt-16 mb-20"> 
+      <body>
+    <section className="mt-16 mb-20"> 
 
        
         <NavbarTop/>

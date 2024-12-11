@@ -15,7 +15,7 @@ export default async function Drikkevarer(){
   
    return(
     <section className="grid grid-cols-2 gap-3 m-4 ">
-
+        <h1 className="text-center font-morningbrew col-span-2">Drikkevarer</h1>
        {drinks.map(drink =>{
            return(
                   <>
