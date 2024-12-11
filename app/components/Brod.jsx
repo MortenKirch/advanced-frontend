@@ -12,7 +12,7 @@ export default function Brod(){
     </div>
       <div className=" bg-tan overflow-hidden rounded-large">
       <div className="flex w-full justify-between">
-        <h3 className="pl-2 font-bold">undertekst omkring den ret som skal være her</h3>
+        <h3 className="pl-2 font-bold">Bagerens friskbagte rugbrød & Koldhævede surdejsbrød</h3>
         <RiInformation2Line size={20} className="m-1 mr-2"/>
         </div>
         <Image src="/bread.png" width={150} height={150} alt="billede af grøntsager"className="self-end"/>

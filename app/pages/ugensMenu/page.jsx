@@ -1,63 +1,34 @@
-import { FaChevronLeft, FaChevronRight} from "react-icons/fa";
-import Paalaeg from "@/app/components/Paalaeg";
-import Brod from "@/app/components/Brod";
-import Dressing from "@/app/components/Dressing";
-import Dip from "@/app/components/Dip";
-import Salat from "@/app/components/Salat";
-import Varmret from "@/app/components/Varmret";
+import Menu from "@/app/components/Menu";
 
-export default function UgensMenu() {
-  
+export default async function UgensMenu() {
+
+function getISOWeekNumber(date = new Date()) {
+  const tempDate = new Date(date.getTime());
+  tempDate.setUTCHours(0, 0, 0, 0);
+  tempDate.setUTCDate(tempDate.getUTCDate() + 4 - (tempDate.getUTCDay() || 7));
+  const yearStart = new Date(Date.UTC(tempDate.getUTCFullYear(), 0, 1));
+  const weekNumber = Math.ceil(((tempDate - yearStart) / 86400000 + 1) / 7);
+  return weekNumber;
+}
+const currentWeekNumber = getISOWeekNumber();
+
+const response =  await fetch(
+  `https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/menu/uge${currentWeekNumber}.json`
+);
+const menuData = await response.json();
+
+
+
+
   return (
     <section className="m-4 ">
-<h1>uge current week</h1>
-
-<div className="flex justify-between w-11/12 bg-cream rounded-lg justify-center m-auto p-1 ">
-  <FaChevronLeft size={40}/>
-  <h3 className="font-bold self-center">Idag mandag?</h3>
-  <FaChevronRight size={40}/>
-</div>
-
-<section className="grid grid-cols-2 gap-3">
+   <h1>Uge {currentWeekNumber}</h1>
 
 
-<Varmret></Varmret>
-
-
-<div className="grid grid-cols-2 col-span-2 gap-3">
-  <h2 className="col-span-2 text-left">Salat</h2>
-    <Salat></Salat>
-    <Salat></Salat>
-  </div>
-
-
-  <div className="grid grid-cols-2 col-span-2 gap-3">
-    <Dressing></Dressing>
-    <Dip></Dip>
-
-
-  </div>
-
-
-    
-  <div className="col-span-2">
-    <Brod/>
-  </div>
-
-<div className="grid grid-cols-2 col-span-2 ">
-  <h2 className="text-left">Pålæg</h2>
-  <div className="grid grid-cols-2 col-span-2 gap-3">
-
-    <Paalaeg/>
-    <Paalaeg/>
-    </div>
-</div>
-
-</section>
-
-
+<Menu menuData={menuData}></Menu>
 
 </section>
 
   );
 }
+

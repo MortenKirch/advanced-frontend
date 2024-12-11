@@ -16,7 +16,7 @@ export default function Mødeforplejning() {
     <input type="text" className="w-full border-black rounded-large border h-12 px-4 m-1" placeholder="Serveringsted"/>
     <div className="flex ">
      <GetDate/>
-    <input type="Number"  className="w-1/2 border-black rounded-large border h-12 px-4 m-1" placeholder="Antal ialt"/>
+    <input type="Number"  className="w-1/2 border-black rounded-large border h-12 px-4 mt-1 ml-1" placeholder="Antal ialt"/>
     </div>
 
 
