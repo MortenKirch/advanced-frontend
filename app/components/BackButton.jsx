@@ -12,7 +12,7 @@ export default function BackButton() {
   }
 
   return (
-    <button onClick={handleBack} className="fixed m-2 ">
+    <button onClick={handleBack} className="fixed m-2 z-20 ">
       <FaArrowLeft size={30} />
     </button>
   )

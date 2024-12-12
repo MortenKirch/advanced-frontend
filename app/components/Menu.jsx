@@ -1,6 +1,6 @@
 "use client";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Paalaeg from "@/app/components/Paalaeg";
 import Brod from "@/app/components/Brod";
 import Dressing from "@/app/components/Dressing";
@@ -46,7 +46,7 @@ export default function Menu({ menuData }) {
             <Varmret data={{ Hovedret: currentData.hovedret, vegetar: currentData.vegetar }} />
 
             {/* Salat */}
-            <div className="grid grid-cols-2 col-span-2 gap-3 mb-3">
+            <div className="grid grid-cols-2 col-span-2 gap-x-3 mb-3">
               <h2 className="col-span-2 text-left">Salat</h2>
               {currentData.salad.map((salad, index) => (
                 <Salat key={index} data={salad} />

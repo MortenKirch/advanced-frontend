@@ -30,11 +30,11 @@ export default function Page() {
    </div>
    
 {}
-      <div className="bg-teal row-span-2 col-span-1 w-full h-full rounded-large drop-shadow-xl overflow-hidden">
+      <div className="bg-teal row-span-2 col-span-1 w-full h-full rounded-large drop-shadow-xl overflow-hidden flex flex-col justify-between">
       <h2>Om os</h2>
       <p className="p-2">Vil du hører mere om os her i Madkammeret så gå et smudt ind på vores hjemmeside, hvor der står meget mere.</p>
       <div className="flex flex-row justify-between">
-      <Image src="/jacob.png" width={100} height={100} alt="billede af Jacob, Ejer af madkammeret"  className="h-auto w-auto"/> 
+      <Image src="/jacob.png" width={100} height={100} alt="billede af Jacob, Ejer af madkammeret"  className=" h-auto w-32 min-w-20"/> 
       <a className=" block  border-white border-4 rounded-full h-10 self-end  text-white m-2 mr-2 "> <HiArrowNarrowRight size={50} className=" flex self-center h-8 text-lg"/></a>
       </div>
       </div>
