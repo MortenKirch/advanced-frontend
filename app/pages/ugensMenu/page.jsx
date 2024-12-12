@@ -21,7 +21,7 @@ const menuData = await response.json();
 
 
   return (
-    <section className="m-4 ">
+    <section className="m-2 ">
    <h1>Uge {currentWeekNumber}</h1>
 
 

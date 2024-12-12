@@ -35,27 +35,27 @@ export default function Page() {
       <p className="p-2">Vil du hører mere om os her i Madkammeret så gå et smudt ind på vores hjemmeside, hvor der står meget mere.</p>
       <div className="flex flex-row justify-between">
       <Image src="/jacob.png" width={100} height={100} alt="billede af Jacob, Ejer af madkammeret"  className="h-auto w-auto"/> 
-      <a href="https://www.madkammer.dk/om-os/" target="_blank"className=" block w-10 h-10 border-white border-4 rounded-full self-end m-2 mr-4 "> <FaArrowRight size={30} className="text-white"/></a>
+      <a className=" block  border-white border-4 rounded-full h-10 self-end  text-white m-2 mr-2 "> <HiArrowNarrowRight size={50} className=" flex self-center h-8 text-lg"/></a>
       </div>
       </div>
 
       <div className="bg-white row-span-1 col-span-1 w-full h-full rounded-large drop-shadow-xl">
      
         <h2 className="bg-butter p-2 rounded-t-large ">Tilbud</h2>
-      <div className="flex rounded-b-large" >
+      <div className="flex rounded-b-large flex-col" >
         <p className="p-2">se hvad vi har på tilbud idag</p>
-        <a className=" block  border-butter border-4 rounded-full h-10 self-center  m-2 mr-2 "> <HiArrowNarrowRight size={50} className=" flex self-center h-8 text-lg"/></a>
+        <a className=" block  border-butter border-4 rounded-full h-10 self-end  m-2 mr-2 "> <HiArrowNarrowRight size={50} className=" flex self-center h-8 text-lg"/></a>
         </div>
       </div>
 
 
-      <div className="bg-blush row-span-1 col-span-1 w-full h-full rounded-large drop-shadow-xl p-2">
+      <div className="bg-blush row-span-1 col-span-1 w-full h-full rounded-large drop-shadow-xl ">
      
         <h2 className="p-2 rounded-t-large ">Klippekort</h2>
-      <div className="flex rounded-b-large" >
-        <p>Spar penge med vores nye kippekort</p>
-        <a className=" block  border-white border-4 rounded-full self-end"> <FaArrowRight size={30} className="strech"/></a>
-        </div>
+      <div className="flex rounded-b-large flex-col" >
+        <p className="p-2">Spar penge med vores nye kippekort</p>
+        <a className=" block  border-white border-4 rounded-full h-10 self-end  m-2 mr-2 "> <HiArrowNarrowRight size={50} className=" flex self-center h-8 text-lg"/></a>
+       </div>
       </div>
 
         <div className="bg-white row-span-1 col-span-2 w-full h-full rounded-large drop-shadow-xl">   
