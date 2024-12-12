@@ -11,17 +11,19 @@ export default function Dressing({ data }) {
 
 
       <div className="flex bg-gold rounded-large flex-col">
-        <div className="col-span-2 flex flex-row">
-          <h3 className="p-2 font-bold">{data}</h3> {/* Display the string directly */}
-          <RiInformation2Line size={25} className="m-1 mr-2" />
-        </div>
-        <Image
-          src="/dessing.png" 
+        <div className="col-span-2 flex flex-row items-start">
+          <h3 className=" m-2 font-bold">{data}</h3> 
+          <Image
+          src="/dressing.png" 
           width={100}
           height={100}
           alt="Billede af dressing"
-          className="self-end rounded-b-large"
+          className="self-end h-32 w-auto"
         />
+          <RiInformation2Line size={25} className="m-1 mr-2" />
+          
+        </div>
+
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function Dip({ data }) {
           width={150}
           height={150}
           alt="Billede af dip"
-          className="self-end rounded-b-large"
+          className="self-center w-28"
         />
       </div>
     </div>
