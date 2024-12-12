@@ -31,11 +31,7 @@ h2{
   font-size: 1.6rem;
   text-align: center;
 }
-h3{
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+
 p{
   font-size: 14px;
 

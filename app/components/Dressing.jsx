@@ -5,26 +5,26 @@ export default function Dressing({ data }) {
   if (!data) return null; // Don't render if no data is provided
 
   return (
-    <div>
+    <>
 
-      <h2 className="col-span-2 text-left">Dressing</h2>
+     
 
 
-      <div className="flex bg-gold rounded-large flex-col">
-        <div className="col-span-2 flex flex-row items-start">
-          <h3 className=" m-2 font-bold">{data}</h3> 
+      <div className="flex bg-gold rounded-large flex-col w-full">
+        <div className="col-span-2 flex justify-between w-full">
+          <h3 className=" m-2 font-bold break-all">{data}</h3> 
           <Image
           src="/dressing.png" 
           width={100}
           height={100}
           alt="Billede af dressing"
-          className="self-end h-32 w-auto"
+          className="w-10"
         />
-          <RiInformation2Line size={25} className="m-1 mr-2" />
+          <RiInformation2Line size={20} className="m-1 mr-2 w-10" />
           
         </div>
 
       </div>
-    </div>
+    </>
   );
 }

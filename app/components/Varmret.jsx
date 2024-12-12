@@ -27,20 +27,20 @@ export default function Varmret({ data }) {
             {isVegan ? "Se kød muligheder her" : "Se vegetar muligheder her"}
           </button>
         </div>
-        <div className="flex bg-butter overflow-hidden rounded-large">
+        <div className="flex bg-butter overflow-hidden rounded-large h-64">
           <Image
             src={"/placeholder-image.png"}
             width={200}
             height={200}
             alt={currentOption.name || "varmret"}
-            className="self-end w-64"
+            className="self-end w-5/12 h-full object-cover"
 
           />
           <div>
             <h3 className="p-2 font-bold">{currentOption.name || currentOption.name}</h3>
             <p className="pl-2">{currentOption.description}</p>
           </div>
-          <RiInformation2Line size={30} className="m-1 mr-2" />
+          <RiInformation2Line size={20} className="m-1 mr-2 w-10" />
         </div>
       </div>
     );

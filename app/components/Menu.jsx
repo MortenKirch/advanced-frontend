@@ -40,13 +40,13 @@ export default function Menu({ menuData }) {
         <FaChevronRight size={40} onClick={handleNextDay} className="cursor-pointer" />
       </div>
 
-      <section className="grid grid-cols-2 gap-3 mt-4">
+      <section className="grid grid-cols-2 gap-3 gap-y-0 mt-4">
         {currentData ? (
           <>
             <Varmret data={{ Hovedret: currentData.hovedret, vegetar: currentData.vegetar }} />
 
             {/* Salat */}
-            <div className="grid grid-cols-2 col-span-2 gap-3">
+            <div className="grid grid-cols-2 col-span-2 gap-3 mb-3">
               <h2 className="col-span-2 text-left">Salat</h2>
               {currentData.salad.map((salad, index) => (
                 <Salat key={index} data={salad} />
@@ -54,19 +54,23 @@ export default function Menu({ menuData }) {
             </div>
 
             {/* Dressing and Dip */}
-            <div className="grid grid-cols-2 col-span-2 gap-3">
+            <h2 className="col-span-1 text-left">Dressing</h2>
+            <h2 className="grid-cols-2  text-left">Dip</h2>
+            <div className="grid grid-cols-2 col-span-2 gap-3 mb-3">
               <Dressing data={currentData.dressing} />
               <Dip data={currentData.dip} />
             </div>
 
             {/* Brød */}
-            <div className="col-span-2">
+            <h2 className="text-left">brød</h2>
+            <div className="col-span-2 mb-3">
               <Brod />
             </div>
 
             {/* Pålæg */}
-            <div className="grid grid-cols-2 col-span-2 gap-3">
-              <h2 className="col-span-2 text-left">Pålæg</h2>
+            <h2 className="col-span-2 text-left">Pålæg</h2>
+            <div className="grid grid-cols-2 col-span-2 gap-3 mb-3">
+              
               {currentData.pålæg.map((paalaeg, index) => (
                 <Paalaeg key={index} data={paalaeg} />
               ))}
