@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import NavbarTop from "./components/NavbarTop";
+import { AuthProvider } from "./context/AuthContext";
 
 export const metadata = {
   title: "Madkammeret",
@@ -15,12 +16,15 @@ export default function RootLayout({ children }) {
 
        
         <NavbarTop/>
-       
-
+        <AuthProvider>
+      
         <Navbar/>
         {children}
+        </AuthProvider>
         </section>
       </body>
     </html>
   );
 }
+
+
