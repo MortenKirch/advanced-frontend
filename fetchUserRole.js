@@ -4,8 +4,6 @@ const fetchUserRole = async (uid) => {
   try {
     const db = getDatabase();
     const userRef = ref(db, `users/${uid}/role/`);
-    console.log(db)
-    console.log(userRef)
     const snapshot = await get(userRef);
 
     if (snapshot.exists()) {
