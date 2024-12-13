@@ -1,7 +1,7 @@
 import Food from "./Food";
 
 export default async function FoodSheet(){
-    const res = await fetch("https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/menu/meeting.json");
+    const res = await fetch("https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/meeting.json");
     const data = await res.json();
 
     

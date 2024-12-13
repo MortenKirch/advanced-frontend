@@ -2,7 +2,7 @@
 import Drink from "@/app/components/Drink";
 
 export default async function Drikkevarer(){
-  const res = await fetch("https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/menu/drikkevarer.json");
+  const res = await fetch("https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/drikkevarer.json");
   const data = await res.json();
 
   

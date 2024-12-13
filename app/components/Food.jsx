@@ -1,7 +1,7 @@
 import MeetingButton from "./MeetingButton";
 
 export default async function Food({item}){
-    const res = await fetch(`https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/menu/meeting/${item}.json`);
+    const res = await fetch(`https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/meeting/${item}.json`);
     const data = await res.json();
 
     const items = Object.keys(data).map(key =>{
