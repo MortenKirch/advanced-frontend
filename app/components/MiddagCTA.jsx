@@ -75,7 +75,7 @@ export default function MiddagCTA() {
               <p className="pl-2">{todayMenu.hovedret.description}</p>
             </div>
             <div className="self-end ">
-            <p>Se resten af menuen</p>
+            <p className="pr-2">Se resten af menuen</p>
     <a  href="/pages/ugensMenu" className=" w-24 block justify-between  border-gold border-4 rounded-full h-10 self-end  m-2 mr-2 flex pl-4 p-1"> Her <HiArrowNarrowRight size={50} className=" flex self-center h-8 text-lg"/></a>
 
     </div>
