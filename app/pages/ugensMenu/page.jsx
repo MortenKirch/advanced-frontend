@@ -13,7 +13,11 @@ function getISOWeekNumber(date = new Date()) {
 const currentWeekNumber = getISOWeekNumber();
 
 const response =  await fetch(
-  `https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/menu/uge${currentWeekNumber}.json`
+  `https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/menu/uge${currentWeekNumber}.json`,{
+    cache: "no-store",
+  }
+
+  
 );
 const menuData = await response.json();
 
