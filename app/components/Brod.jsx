@@ -15,7 +15,7 @@ export default function Brod(){
         <h3 className="pl-2 font-bold">Bagerens friskbagte rugbrød & Koldhævede surdejsbrød</h3>
         <RiInformation2Line size={20} className="m-1 mr-2 w-10"/>
         </div>
-        <Image src="/bread.png" width={150} height={150} alt="billede af grøntsager"className="flex self-end"/>
+        <Image src="/bread.png" width={150} height={150} alt="billede af grøntsager"className="flex self-end h-auto w-auto"/>
   
         </div>
       
