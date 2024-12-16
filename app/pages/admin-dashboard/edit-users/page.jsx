@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import { auth } from '@/firebaseConfig'; // Ensure only auth is imported
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+  export default function page(){
+
+  
 
 
-const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
@@ -91,7 +93,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter your email"
+            placeholder="indtast email"
           />
         </div>
         
@@ -104,12 +106,12 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter your password"
+            placeholder="indtast password"
           />
         </div>
         
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="displayName">Display Name:</label>
+          <label className="block text-gray-700 mb-2" htmlFor="displayName">Navn:</label>
           <input
             id="displayName"
             type="text"
@@ -117,19 +119,19 @@ const Register = () => {
             onChange={(e) => setDisplayName(e.target.value)}
             required
             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter your display name"
+            placeholder="Indtast fulde navn"
           />
         </div>
         
         <div className="mb-6">
-          <label className="block text-gray-700 mb-2" htmlFor="role">Role:</label>
+          <label className="block text-gray-700 mb-2" htmlFor="role">Adgang</label>
           <select
             id="role"
             value={role}
             onChange={(e) => setRole(e.target.value)}
             className="w-full px-3 py-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="teacher">Teacher</option>
+            <option value="teacher">Lærer</option>
             <option value="admin">Admin</option>
           </select>
         </div>
@@ -139,11 +141,9 @@ const Register = () => {
           className={`w-full  text-white py-2 rounded bg-forest rounded-large ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
           disabled={loading}
         >
-          {loading ? 'Registering...' : 'Register'}
+          {loading ? 'Registere...' : 'Register'}
         </button>
       </form>
     </div>
   );
 };
-
-export default Register;
