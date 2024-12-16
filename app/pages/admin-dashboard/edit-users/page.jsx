@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { auth } from '@/firebaseConfig'; // Ensure only auth is imported
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-  export default function page(){
+  export default function Page(){
 
   
 

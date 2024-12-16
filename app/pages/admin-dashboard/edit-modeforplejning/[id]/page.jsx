@@ -28,7 +28,7 @@ export default function ItemPage() {
   // Load data when component mounts or 'id' changes
   useEffect(() => {
     fetchItems();
-  }, [id]);
+  }, [fetchItems]);
 
   // Handle adding a new item
   async function handleAddItem(e) {
