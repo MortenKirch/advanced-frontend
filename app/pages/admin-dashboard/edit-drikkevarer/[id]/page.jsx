@@ -13,7 +13,7 @@ export default async function EditDrinkPage({ params }) {
     // Fetch drink data on the server
     const res = await fetch(
       `https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/drikkevarer/${id}.json`,
-      { cache: 'no-store' } // Ensures fresh data is fetched
+      { cache: 'no-store' } 
     );
 
     if (!res.ok) {
@@ -30,7 +30,7 @@ export default async function EditDrinkPage({ params }) {
             href="/pages/admin-dashboard/edit-drikkevarer"
             className="mt-4 text-blue-500 hover:underline"
           >
-            Back to Edit Drinks
+            Tilbage
           </Link>
         </div>
       );
@@ -40,7 +40,7 @@ export default async function EditDrinkPage({ params }) {
       <div className="max-w-4xl mx-auto mt-10 p-6 bg-gray-50 rounded-lg shadow-lg">
         {/* Title */}
         <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-          Edit Drink: <span className="text-blue-500">{drink.name}</span>
+           <span className="">{drink.name}</span>
         </h1>
 
         {/* Display Drink Image */}
@@ -61,7 +61,7 @@ export default async function EditDrinkPage({ params }) {
             href="/pages/admin-dashboard/edit-drikkevarer"
             className="text-blue-500 hover:underline"
           >
-            Back to Edit Drinks
+            Tilbage
           </Link>
         </div>
       </div>
@@ -75,7 +75,7 @@ export default async function EditDrinkPage({ params }) {
           href="/pages/admin-dashboard/edit-drikkevarer"
           className="mt-4 text-blue-500 hover:underline"
         >
-          Back to Edit Drinks
+          Tilbage
         </Link>
       </div>
     );

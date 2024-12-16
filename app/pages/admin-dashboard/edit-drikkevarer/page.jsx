@@ -23,7 +23,9 @@ export default async function DrikkevarerPage() {
       
       <ul className='grid gap-3 grid-cols-2'>
       <li className='w-full h-full  '>
-      <Link href={`edit-drikkevarer/new-drink`} className="flex justify-around self-center items-center w-full h-full">
+       
+      <Link href={`edit-drikkevarer/new-drink`} className="flex justify-around self-center items-center w-full h-full shadow-inner rounded-large">
+     
                   <div className="radius-large shadow-inner flex justify-around w-20 h-20 rounded-large">
                   
                   

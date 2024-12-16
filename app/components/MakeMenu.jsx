@@ -67,10 +67,10 @@ export default function MakeMenu({ onSubmit, initialData = [] }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 flex flex-col">
       {weeklyMenu.map((day, dayIndex) => (
-        <div key={dayIndex} className="border p-4 rounded">
-          <h2 className="text-xl font-bold mb-2">Dag {dayIndex + 1}</h2>
+        <div key={dayIndex} className="border-2 p-4 rounded-xl bg-cream">
+          <h3 className="text-xl font-bold mb-2 text-center">Dag {dayIndex + 1}</h3>
           <input
             type="text"
             value={day.day}
@@ -105,7 +105,7 @@ export default function MakeMenu({ onSubmit, initialData = [] }) {
                 className="w-full p-2 border rounded mb-2"
               />
               <div className="mb-2">
-                <h4 className="font-semibold">Allergenes</h4>
+                <h4 className="font-semibold">Allergener</h4>
                 {day[dishType].allergenes.map((allergen, allergenIndex) => (
                   <div key={allergenIndex} className="flex gap-2 mb-2">
                     <input
@@ -184,7 +184,7 @@ export default function MakeMenu({ onSubmit, initialData = [] }) {
           />
         </div>
       ))}
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded">Indsend Ugentlig Menu</button>
+      <button type="submit" className="bg-forest text-white p-2 rounded-large flex self-center">Indsend Ugentlig Menu</button>
     </form>
   );
 }

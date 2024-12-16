@@ -75,10 +75,10 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <form 
         onSubmit={handleRegister} 
-        className="bg-white p-8 rounded shadow-md w-full max-w-md"
+        className="bg-cream p-8 rounded shadow-md w-full max-w-md"
       >
         <h2 className="text-2xl font-semibold font-sans mb-6 text-center">Opret Bruger</h2>
         
@@ -136,7 +136,7 @@ const Register = () => {
         
         <button 
           type="submit" 
-          className={`w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`w-full  text-white py-2 rounded bg-forest rounded-large ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
           disabled={loading}
         >
           {loading ? 'Registering...' : 'Register'}

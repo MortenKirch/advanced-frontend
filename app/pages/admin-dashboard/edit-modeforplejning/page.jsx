@@ -65,7 +65,7 @@ export default function Page() {
   async function handleDelete(id) {
     try {
       await fetch(
-        `https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/meeting/.json`,
+        `https://madkammeret-b04c3-default-rtdb.europe-west1.firebasedatabase.app/meeting/${id}.json`,
         {
           method: "DELETE",
         }
@@ -81,20 +81,22 @@ export default function Page() {
   return (
     <div className="p-4">
       {/* Display the list of items */}
-      <h2 className="text-xl font-bold mb-2">Items</h2>
+      <h2 className="text-xl font-bold mb-2">items </h2>
       {items.map((item) => (
         <div
           key={item.id}
-          className="p-2 border-b flex flex-col w-full justify-between items-center"
+          className="p-2 border-b flex flex-row w-full "
         >
-          <Link
-            href={`edit-modeforplejning/${item.id}`}
-            className="w-full flex justify-around "
-          >
-            <h3 className="text-center w-2/3 h-10 p-2 bg-cream rounded-xl">
+  
+            <h3 className="h-10 p-2 text-md font-bold rounded-xl w-full">
               {item.title || `${item.id}`}
             </h3>
-          </Link>
+            <Link
+            href={`edit-modeforplejning/${item.id}`}
+                  className="bg-yellow-500 text-white px-4 py-2 rounded mr-4"
+          >
+            Edit
+              </Link>
           <button
             onClick={() => handleDelete(item.id)}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
@@ -104,10 +106,10 @@ export default function Page() {
         </div>
       ))}
 
-      <h2 className="text-xl font-bold mb-4 mt-6">Add a New Item</h2>
+      <h2 className="text-xl font-bold mb-4 mt-6">Tilføj nyt Item</h2>
 
       {/* Form to add new items */}
-      <form onSubmit={handleSubmit} className="mb-6">
+      <form onSubmit={handleSubmit} className="mb-6 flex flex-col">
         <div className="mb-2">
           <label className="block text-sm font-medium">Title</label>
           <input
@@ -121,10 +123,10 @@ export default function Page() {
 
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-forest text-white px-4 py-2 rounded-large"
           disabled={isLoading}
         >
-          {isLoading ? "Adding..." : "Add Item"}
+          {isLoading ? "Tilføjer..." : "Tilføj"}
         </button>
       </form>
     </div>

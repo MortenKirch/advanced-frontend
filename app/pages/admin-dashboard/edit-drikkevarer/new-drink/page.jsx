@@ -80,7 +80,7 @@ export default function NewDrink() {
             value={formData.name}
             onChange={handleInputChange}
             placeholder="Navn på drink"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm "
             required
           />
         </div>
@@ -96,7 +96,7 @@ export default function NewDrink() {
             value={formData.price}
             onChange={handleInputChange}
             placeholder="Pris"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm "
             required
           />
         </div>
@@ -112,19 +112,19 @@ export default function NewDrink() {
             value={formData.image}
             onChange={handleInputChange}
             placeholder="Image URL"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm "
             required
           />
         </div>
 
         {/* Save Button */}
-        <div className="flex justify-end">
+        <div className="flex justify-center">
 
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="px-4 py-2 bg-forest text-white font-medium rounded-large  "
           >
-            Save Changes
+            Gem ændringer
           </button>
 
         </div>
@@ -143,7 +143,7 @@ export default function NewDrink() {
           href="/pages/admin-dashboard/edit-drikkevarer"
           className="text-blue-500 hover:underline"
         >
-          Back to Edit Drinks
+          Tilbage
         </Link>
       </div>
     </div>

@@ -1,35 +1,30 @@
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import ForsideCTA from "./components/ForsideCTA";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import MiddagCTA from "./components/MiddagCTA";
+import EftermiddagCTA from "./components/EftermiddagCTA";
+
 
 
 export default function Page() {
+  const getCurrentCTA = () => {
+    const hour = new Date().getHours(); // Get current hour
+    if (hour >= 7 && hour < 11) {
+        return <ForsideCTA />;
+    } else if (hour >= 11 && hour <= 15) {
+        return <MiddagCTA />;
+    } else {
+        return <EftermiddagCTA />;
+    }
+};
+
   return (
     <>
     <h1 className="text-center font-morningbrew">Velkommen til Madkammeret</h1>
 
     <section className="grid grid-row-4 grid-cols-2 gap-3 m-4">
+    {getCurrentCTA()}
 
-    <div className="bg-white row-span-1 col-span-2 w-full h-full rounded-large drop-shadow-xl ">
-     
-     <h2 className="bg-rose p-2 rounded-t-large ">Morgenmad</h2>
-     <p className="p-2">Kom ned i kanitnen og få din morgenmad eller se bagerens friskbagte brød</p>
-      <div className="flex rounded-b-large h-44 " >
-
-        <ul  className="p-2 flex flex-col justify-end">
-        <li>
-        Kaffe: 12kr
-        </li>
-        <li>
-          bolle med ost: 22kr
-        </li>
-        </ul> 
-    
-        <Image src="/coffee-and-c.png" width={80} height={80} alt="billede af croissant" className="w-auto h-auto"></Image>
-     </div>
-   </div>
-   
-{}
       <div className="bg-teal row-span-2 col-span-1 w-full h-full rounded-large drop-shadow-xl overflow-hidden flex flex-col justify-between">
       <h2>Om os</h2>
       <p className="p-2">Vil du hører mere om os her i Madkammeret så gå et smudt ind på vores hjemmeside, hvor der står meget mere.</p>

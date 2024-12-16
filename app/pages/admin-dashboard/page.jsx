@@ -1,18 +1,49 @@
-import Link from "next/link"
-import Varmret from "@/app/components/Varmret"
+import Link from "next/link";
+import { FaEdit } from "react-icons/fa";
+
 export default function AdminDashboard() {
- 
-    return (
-        <>
-        <section className="m-2 w-full flex flex-col">
-        <h1 className="font-sans ">Admin</h1>
-        <h3 className="text-center text-lg">Her har du mulighed for at ændre dit content</h3>
-        
-        <Link href="admin-dashboard/edit-menu" className="text-center self-center text-lg m-4 p-2 w-2/3 h-10 bg-forest text-white rounded-xl"> Ugens menu</Link>
-        <Link href="admin-dashboard/edit-drikkevarer" className="text-center self-center text-lg m-4 p-2 w-2/3  h-10 bg-forest text-white rounded-xl "> Drikkevarer</Link>
-        <Link href="admin-dashboard/edit-modeforplejning" className="text-center self-center text-lg m-4 p-2 w-2/3  h-10 bg-forest text-white rounded-xl "> mødeforplejning</Link>
-        <Link href="admin-dashboard/edit-users" className="text-center self-center text-lg m-4 p-2 w-2/3  h-10 bg-forest text-white rounded-xl "> Brugere</Link>
-        </section>
-        </>
-    )
+  return (
+    <>
+      <section className="m-4 w-full flex flex-col items-center">
+        <h1 className="font-sans text-3xl font-bold mb-4">Admin Dashboard</h1>
+        <h3 className="text-center text-lg text-gray-600 mb-8">
+          Her kan du administrere og redigere indholdet
+        </h3>
+
+        <div className="grid grid-cols-1 gap-6 w-full max-w-md">
+          <Link
+            href="admin-dashboard/edit-menu"
+            className="flex items-center justify-between p-4 w-full bg-forest text-white rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
+          >
+            <span className="text-lg font-semibold">Ugens menu</span>
+            <FaEdit size={30}></FaEdit>
+          </Link>
+
+          <Link
+            href="admin-dashboard/edit-drikkevarer"
+            className="flex items-center justify-between p-4 w-full bg-forest text-white rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
+          >
+            <span className="text-lg font-semibold">Drikkevarer</span>
+            <FaEdit size={30}></FaEdit>
+          </Link>
+
+          <Link
+            href="admin-dashboard/edit-modeforplejning"
+            className="flex items-center justify-between p-4 w-full bg-forest text-white rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
+          >
+            <span className="text-lg font-semibold">Mødeforplejning</span>
+            <FaEdit size={30}></FaEdit>
+          </Link>
+
+          <Link
+            href="admin-dashboard/edit-users"
+            className="flex items-center justify-between p-4 w-full bg-forest text-white rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
+          >
+            <span className="text-lg font-semibold">Brugere</span>
+            <FaEdit size={30}></FaEdit>
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }

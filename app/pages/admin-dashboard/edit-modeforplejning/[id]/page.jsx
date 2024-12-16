@@ -71,7 +71,7 @@ export default function ItemPage() {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-2">Existing Items</h2>
+      <h2 className="text-xl font-bold mb-2">eksisterende varer</h2>
       {items.length > 0 ? (
         items.map((item) => (
           <div
@@ -94,7 +94,7 @@ export default function ItemPage() {
         <p>No items available.</p>
       )}
 
-      <h2 className="text-xl font-bold mb-4 mt-6">Add New Item</h2>
+      <h2 className="text-xl font-bold mb-4 mt-6">Tilføj</h2>
       {/* Add New Item Form */}
       <form onSubmit={handleAddItem} className="mb-4">
         <div className="mb-2">
@@ -119,10 +119,10 @@ export default function ItemPage() {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-forest w-full text-white px-4 py-2 rounded-large"
           disabled={isLoading}
         >
-          {isLoading ? "Adding..." : "Add Item"}
+          {isLoading ? "Tilføjer..." : "Tilføj"}
         </button>
       </form>
     </div>
