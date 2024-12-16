@@ -11,7 +11,7 @@ export default function Page() {
     const hour = new Date().getHours(); // Get current hour
     if (hour >= 7 && hour < 11) {
         return <ForsideCTA />;
-    } else if (hour >= 11 && hour <= 15) {
+    } else if (hour >= 11 && hour < 14) {
         return <MiddagCTA />;
     } else {
         return <EftermiddagCTA />;
