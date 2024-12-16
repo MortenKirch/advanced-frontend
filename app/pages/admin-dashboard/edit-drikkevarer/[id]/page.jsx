@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import DrinkEditForm from '@/app/components/DrinkEditForm';
 
 
@@ -45,7 +46,8 @@ export default async function EditDrinkPage({ params }) {
 
         {/* Display Drink Image */}
         <div className="flex justify-center mb-6">
-          <img
+          <Image width={300}
+          height={300}
             src={drink.image || 'https://via.placeholder.com/300'}
             alt={drink.name}
             className="w-64 h-64 object-cover rounded-lg shadow-md"

@@ -1,6 +1,6 @@
 "use client";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ export default function MiddagCTA() {
     const weekNumber = Math.ceil(((tempDate - yearStart) / 86400000 + 1) / 7);
     return weekNumber;
   }
-  const currentWeekNumber = getISOWeekNumber();
+  const currentWeekNumber = useMemo(() => getISOWeekNumber(), []);
 
   // Get the current day of the week
   const getCurrentDayName = () => {
