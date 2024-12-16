@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 export default function NewDrink() {
   const [formData, setFormData] = useState({
     name: "",
@@ -61,7 +62,9 @@ export default function NewDrink() {
       </h1>
 
       <div className="flex justify-center mb-6">
-        <img
+        <Image 
+        width={300}
+        height={300}
           src={formData.image || "https://via.placeholder.com/300"}
           alt="Preview"
           className="w-64 h-64 object-cover rounded-lg shadow-md"

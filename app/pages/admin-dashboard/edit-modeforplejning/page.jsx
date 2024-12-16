@@ -25,7 +25,7 @@ export default function Page() {
   // Load items when the page loads
   useState(() => {
     fetchItems();
-  }, []);
+  }, [fetchItems]);
   async function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
