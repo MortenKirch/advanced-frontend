@@ -2,11 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['firebasestorage.googleapis.com'], // Add Firebase Storage domain here
+    domains: ['firebasestorage.googleapis.com', 'images.unsplash.com'], // Correctly formatted array
   },
 };
 
-
-  
-  export default nextConfig;
-  
+export default nextConfig;
