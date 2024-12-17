@@ -18,7 +18,7 @@ export default function ForsideCTA(){
            </li>
            </ul> 
        
-           <Image src="/coffee-and-c.png" width={80} height={80} alt="billede af croissant" className="w-auto h-auto"></Image>
+           <Image src="/coffee-and-c.png" width={200} height={200} alt="billede af croissant" className="w-auto h-auto"></Image>
         </div>
       </div>
       
