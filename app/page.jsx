@@ -1,23 +1,34 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import ForsideCTA from "./components/ForsideCTA";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import MiddagCTA from "./components/MiddagCTA";
 import EftermiddagCTA from "./components/EftermiddagCTA";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
-
-//
+// Function to determine which CTA to show
+const getCurrentCTA = () => {
+  const hour = new Date().getHours();
+  if (hour >= 7 && hour < 11) {
+    return <ForsideCTA />;
+  } else if (hour >= 11 && hour < 14) {
+    return <MiddagCTA />;
+  } else {
+    return <EftermiddagCTA />;
+  }
+};
 
 export default function Page() {
-  const getCurrentCTA = () => {
-    const hour = new Date().getHours(); // Get current hour
-    if (hour >= 7 && hour < 11) {
-        return <ForsideCTA />;
-    } else if (hour >= 11 && hour < 14) {
-        return <MiddagCTA />;
-    } else {
-        return <EftermiddagCTA />;
-    }
-};
+  const [currentCTA, setCurrentCTA] = useState(getCurrentCTA());
+
+  // Update the CTA every 15 minutes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCTA(getCurrentCTA());
+    }, 15 * 60 * 1000); // 15 minutes in milliseconds
+
+    return () => clearInterval(interval); // Cleanup the interval
+  }, []);
 
   return (
     <>
